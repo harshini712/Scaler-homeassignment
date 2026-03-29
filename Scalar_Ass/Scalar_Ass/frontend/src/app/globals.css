@@ -1,0 +1,39 @@
+/* 1. New Tailwind v4 Import */
+@import "tailwindcss";
+
+/* 2. Base HTML/Body Resets */
+@layer base {
+  html,
+  body {
+    @apply bg-gray-50 text-gray-900 antialiased h-full w-full;
+  }
+
+  /* 3. Global Form Input Styling */
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  input[type="date"],
+  input[type="time"],
+  textarea {
+    @apply border border-gray-300 bg-white px-3 py-2 text-sm shadow-sm placeholder-gray-400 focus:border-black focus:outline-none focus:ring-1 focus:ring-black transition-all disabled:bg-gray-100 disabled:text-gray-500;
+  }
+
+  /* 4. Global Checkbox Styling */
+  input[type="checkbox"] {
+    @apply h-4 w-4 rounded border-gray-300 text-black focus:ring-black transition-all cursor-pointer;
+  }
+}
+
+/* 5. Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 rounded-full hover:bg-gray-400 transition-colors;
+}
